@@ -9,7 +9,7 @@ const { list } = JSON.parse(data);
 
 console.log(data, list);
 
-const baseUrl = "https://pure.jsdelivr.net/gh/LiangSenCheng/blog-img/"
+const baseUrl = "https://purge.jsdelivr.net/gh/LiangSenCheng/blog-img/"
 
 async function frushcdn(filePath) {
   // 上面的请求也可以这样做
