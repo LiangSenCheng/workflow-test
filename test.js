@@ -3,7 +3,22 @@ const path = require('path');
 
 const testJsonFile = path.resolve(__dirname, './test.json');
 
-const data = fs.readFileSync(testJsonFile, 'UTF-8').toString();
-let config = JSON.parse(data);
+const dataStr = fs.readFileSync(testJsonFile, 'UTF-8').toString();
+const data = JSON.parse(dataStr);
 
 console.log(data);
+
+const baseUrl = "https://pure.jsdelivr.net/gh/LiangSenCheng/blog-img"
+
+async function frushcdn(filePath) {
+  // 上面的请求也可以这样做
+  const res = axios.get(`${baseUrl}${filePath}`, {});
+  console.log(res);
+  return filePath;
+}
+
+const list = data.map(async (item) => {
+  return await frushcdn(item);
+});
+
+console.log(list);
