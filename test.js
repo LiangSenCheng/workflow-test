@@ -55,6 +55,7 @@ async function frushcdn(filePath) {
   } catch (err) {
     resData["code"] = 40001
   } finally {
+    console.log(resData);
     return resData;
   }
 }
