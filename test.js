@@ -53,6 +53,7 @@ async function frushcdn(filePath) {
       resData["msg"] = "网络请求失败~";
     }
   } catch (err) {
+    console.log(err);
     resData["code"] = 40001
   } finally {
     console.log(resData);
