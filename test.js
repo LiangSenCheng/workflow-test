@@ -16,7 +16,7 @@ const {
 
 console.log(data, list);
 
-const baseUrl = "https://pure.jsdelivr.net/gh/LiangSenCheng/blog-img/"
+const baseUrl = "https://purge.jsdelivr.net/gh/LiangSenCheng/blog-img/"
 
 async function frushcdn(filePath) {
   let resData = {
@@ -53,7 +53,6 @@ async function frushcdn(filePath) {
       resData["msg"] = "网络请求失败~";
     }
   } catch (err) {
-    console.log(err);
     resData["code"] = 40001
   } finally {
     console.log(resData);
