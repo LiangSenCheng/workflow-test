@@ -17,8 +17,8 @@ async function frushcdn(filePath) {
   return filePath;
 }
 
-const list = data.map(async (item) => {
+const result = data.map(async (item) => {
   return await frushcdn(item);
 });
 
-console.log(list);
+console.log(result);
