@@ -13,7 +13,7 @@ const baseUrl = "https://pure.jsdelivr.net/gh/LiangSenCheng/blog-img/"
 
 async function frushcdn(filePath) {
   // 上面的请求也可以这样做
-  const res = axios.get(`${baseUrl}${filePath}`, {});
+  const res = await axios.get(`${baseUrl}${filePath}`, {});
   console.log(res);
   return filePath;
 }
