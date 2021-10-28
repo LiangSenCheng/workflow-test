@@ -3,10 +3,10 @@ const path = require('path');
 
 const testJsonFile = path.resolve(__dirname, './test.json');
 
-const dataStr = fs.readFileSync(testJsonFile, 'UTF-8').toString();
-const data = JSON.parse(dataStr);
+const data = fs.readFileSync(testJsonFile, 'UTF-8').toString();
+const { list } = JSON.parse(data);
 
-console.log(data);
+console.log(data, list);
 
 const baseUrl = "https://pure.jsdelivr.net/gh/LiangSenCheng/blog-img/"
 
