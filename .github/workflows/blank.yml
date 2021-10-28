@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  Frush-CDN:
     runs-on: ubuntu-latest
 
     steps:
